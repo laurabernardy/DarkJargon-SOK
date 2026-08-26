@@ -46,6 +46,6 @@ build/
 coverage/
 .coverage
 
-#custom
-"C:\Users\laura.bernardy\OneDrive - University of Luxembourg\Documents\GitHub\DarkJargon-SOK\darkJargon_SoK_taxonomy_tables.xlsx"
-"C:\Users\laura.bernardy\OneDrive - University of Luxembourg\Documents\GitHub\DarkJargon-SOK\paper_retrieval.xlsx"
+# Excel source files
+/DarkJargon_SoK_taxonomy_tables.xlsx
+/Paper_retrieval.xlsx
