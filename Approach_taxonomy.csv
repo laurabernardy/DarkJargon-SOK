@@ -1,0 +1,87 @@
+Paper title;Objective;Jargon def.;Models;Sup.;Modeling Method;Main Eval. Method;Notes;Data;Results;Word used for dark jargon;Categories;Language;short method description
+"SONG, M., JANG, E., KIM, J., AND SHIN, S. Covering cracks in con-
+tent moderation: Delexicalized distant supervision for illicit drug jar-
+gon detection. In Proceedings of the 31st ACM SIGKDD Conference
+on Knowledge Discovery and Data Mining V.1 (New York, NY, USA,
+2025), KDD ’25, Association for Computing Machinery, p. 1265–1276.";O1;T1, T2, T2';M3, M4, M5;S2;MLM;E1;"FOR DRUG EUPHEMISMIN ONLY ""Drug Jargon""
+-> Given a sentence and a word in the sentence, determine whether
+the word is used as a drug jargon in the specific contex (benigm meaning or not)";"The Reddit Drug corpus (Zhu et al. : surface web  discussions, silk Road Forum corpus (Branwen et al., dark web discussions; drug slang report (DEA) --> list of 46 explicit drug terms   ";reddit drug: 0.64 f1, silk road forum: 0.63 f1;drug jargon;drug terms;english;JEDIS using a small set of known drug seed terms, masks the target word in sentence, BERT classifier must decide whether it is drug jargon purely from surrounding context. + encodes  target word with separate contextual embedding model and ensembles both predictions to combine contextual generalization with lexical disambiguation.
+"JIN, Y., JANG, E., CUI, J., CHUNG, J.-W., LEE, Y., AND SHIN, S.
+Darkbert: A language model for the dark side of the internet. arXiv
+preprint arXiv:2305.08596 (2023)";O1, O2;T1, T2, T2';M3, M4, M5;S1, S4;;E2;Domain LM;6.1 million crawled dark web pages, Eval daatsets: DUTA-10K and CoDA;"DUTAcased: 80.01 f1, uncased: 79.69 f1; CODAcased: 94.29 f1, uncased: 94.46 f1,                            Fill in mask testing: Filling in dark web terms instead of clean ";Language used in the Dark Web;Crypto, Drugs, Electronic, Financial, Gambling, Hacking, Others, Porn, Violence, ;english;RoBERTa model pretrained on scraped dark web data, to learn domain specific vocab & knowledge. Tested with classification val datasets, ransomware & threat detection
+"HUANG, X., ZHAO, J., SHI, J., SUN, Y., WANG, X., AND SHEN, L.
+Syntactic enhanced euphemisms identification based on graph convolution networks and dependency parsing. In 2023 8th International
+Conference on Data Science in Cyberspace (DSC) (2023), pp. 172–
+180";O1, O3;T2, T2';M3 , M5, M4;S3;SY;E2;GCN + dependency Graph Parsing;same as (“Self-Supervised Euphemism Detection and Identification for Content Moderation.” );acc: drug: 0.08, weapon: 0.12, sex: 0.37;euphemisms, algospeak, dark jargon;3 categories: drug, weapon, sexuality;english;MLM to prompt for masks in sentences, encode each sentence as a graph (nodes = words and edges from dependency parsing, then applies a BiLSTM to capture contextual semantics and a Graph Convolutional Network to propagate information along syntactic relations. The fused semantic–syntactic representations are fed into a softmax classifier to predict the most likely sensitive word corresponding to a masked euphemism, reducing bias from surface-level lexical cues
+"SEYLER, D., LIU, W., WANG, X., AND ZHAI, C. Towards dark jargon
+interpretation in underground forums. In Advances in Information Retrieval: 43rd European Conference on IR Research, ECIR 2021,
+Virtual Event, March 28 – April 1, 2021, Proceedings, Part II (Berlin,
+Heidelberg, 2021), Springer-Verlag, p. 393–400.";O1, O3;T2, T2';M2, M5, M8;S1;CD;E2;Two corpora comparison;"dark corpus: 376,989 posts: from : Silk Road, Nulled,
+Hackforums  and Dark0de;  clean corpus: 1.2 million reddit threads from 1,697 top subreddits  (yuan?)";MRR: KL: 0.892, CCLA: 0.479 (artificial evaluation);dark jargon, dark words;no classes;english;given a dark corpus and a clean corpus, it represents each word by a probability distribution over its surrounding context words, built using a sliding window. A dark word’s hidden meaning is then inferred by finding the clean word whose context distribution is most similar (i.e., has the lowest KL-divergence), under the assumption that words with the same meaning are used in similar contexts even if their surface forms differ
+"ZHU, W., GONG, H., BANSAL, R., WEINBERG, Z., CHRISTIN, N.,
+FANTI, G., AND BHAT, S. Self-supervised euphemism detection and
+identification for content moderation. In 2021 IEEE Symposium on
+Security and Privacy (SP) (2021), pp. 229–246.";O1, O3;T2, T2';M3, M4, M5;S1, S4;MLM;E2;Self-supervised;"Drugs:~1.27 million posts from 46 drug-related subreddits (e.g., Drugs, DarkNetMarkets, SilkRoad), spanning 2008–2017.; Weapons:~310,000 posts collected from online forums, prior research datasets, and slang resources (e.g., Gab, Slangpedia); Sexuality:~2.9 million posts from Gab, collected between Jan–Oct 2018; U.S. Drug Enforcement Administration (DEA),Online Slang Dictionary, Slangpedia, Urban Thesaurus";"Euphemism detection: Precision @10: drug:0.50, weapon: 0.40, sex:0.70;        Euphemism identification: Acc: drug:0.20, weapon: 0.33, sex: 0.32";euphemism;Drugs, Weapons, Sex;english;"euphemism discovery: self-supervised masked language modeling problem: contexts of known target keywords are extracted, denoised using an MLM-based relevance filter, and then used to rank candidate replacements by aggregated mask probabilities.
+Euphemism identification: via a coarse-to-fine classification pipeline, using a binary classifier to filter non-euphemistic contexts and a multi-class classifier trained on automatically labeled masked sentences to map each euphemism to its target keyword (human created)"
+"HU, Y., WU, M., HUANG, Z., LI, J., GE, X., AND SHA, Y. Eu-
+phemism identification via feature fusion and individualization. In Pro-
+ceedings of the ACM Web Conference 2024 (New York, NY, USA, 2024),
+WWW ’24, Association for Computing Machinery, p. 2383–2394.";O1, O3;T2, T2';M3, M4, M5;S4;MLM;E2 ;Feature fusion, map jargon words to generalizations (keywords) based on their context words;"three separate datasets: Drug, Weapon, and sexuality with 33/9/12 subcategories (from Reddit (Zhu et al), Gab, Online Slang Dictionary, Urban Thesaurus), 7,275,764 entries; Validation: Online Slang Dictionary (weapon & sex) & the Urban Thesaurus (sex) & U.S. Drug Enforcement Administrator (drugs)";acc drugs: 0.31, weapons: 0.42, sexuality: 0.46;euphemism;3 categories: drug, weapon, sexuality;english;cloze (masked-word) prediction task, training a model to predict the correct target keyword when the euphemism is masked, using self-supervised data created by masking known target words during training
+"ZHAO, K., ZHANG, Y., XING, C., LI, W., AND CHEN, H. Chinese
+underground market jargon analysis based on unsupervised learning.
+In 2016 IEEE Conference on Intelligence and Security Informatics
+(ISI) (2016), pp. 97–102. ";O1, O3;T1, T2, T2', T3;M2, M3, M6;S1;CE;E2;"unfamiliar cybercriminal jargons from Chinese underground markets (QQ groups)
+--> Detect with unsupervised machine learning methods, word embedding and Latent Dirichlet Allocation
+--> learn semantically similar words of known cybersecurity-related jargons";QQ group chats of 29 groups, 23000 members, 90000 text posts, 18800 unique posts ;Best results: P@10 Word2Vec: 60.56%, LDA: 40.9%;jargon;70 typical Chinese underground jargons (as much as possible);chinese;use word embeddings (Word2vec) to capture semantic similarity from word co-occurrence contexts and Latent Dirichlet Allocation (LDA) to group related terms into latent topics
+"KE, L., CHEN, X., AND WANG, H. An unsupervised detection frame-
+work for chinese jargons in the darknet. In Proceedings of the Fifteenth
+ACM International Conference on Web Search and Data Mining (New
+York, NY, USA, 2022), WSDM ’22, Association for Computing Machin-
+ery, p. 458–466.";O1, O3 ;T1, T2, T2';M1, M3, M5, M6, M8;S1, S2;CE;E2;Unsupervised,  based on seed keywords for classification, corpus comparison;"""DC-DATASET"" 6 Chinese darknet trading websites, namely ""Exchange
+Trading Market"", ""Alibaba"", ""The Ancient Tea Horse Road"", ""Dark-
+net China"", ""Darknet Trading Forum"", and ""Loulan City""";accuracy of 91.5%;jargon;"10 categories: ""drugs"", ""gambling"", ""bank card"", ""pornogra-
+ phy"", ""hacking"", ""guns"", ""money laundering"", ""penny wise"", ""fraud"",
+and ""illegal production""";chinese;"Word not included in chinese clean dictionary : maybe jargon; if in dictionary + highly related (cosine similarity of vector) to seed words & similarity between usage in dark net corpus & chinese corpus is low => Jargon"
+"SEYLER, D., LIU, W., ZHANG, Y., WANG, X., AND ZHAI, C. Dark-
+jargon.net: A platform for understanding underground conversation
+with latent meaning. In Proceedings of the 44th International ACM
+SIGIR Conference on Research and Development in Information Re-
+trieval (New York, NY, USA, 2021), SIGIR ’21, Association for Com-
+puting Machinery, p. 2526–2530.";O1, O3, O4;T1, T2, T2', T3;M1, M5, M6, M8;S1, S2, S4;CD, (MLM); E4;;;;;;english;
+"E, L., XIAO, P., CHEN, X., YU, S., CHEN, X., AND WANG, H.
+A novel cross-domain adaptation framework for unsupervised crimi-
+nal jargon detection via pre-trained contextual embedding of darknet
+corpus. Expert Systems with Applications 242 (2024), 122715.";O1, O3, O4;T1, T2, T2', (T3);M1, M3, M5, M8;S1. (S2), S4;CE;E2;unsupervised cross-domain adaptation Chinese jargon detection framework (CJD-Framework);"""DC-DATASET"" 6 chinese darknet marketplaces (“Exchange Trading Market”, “Alibaba”, “The Ancient Tea Horse Road”, “Darknet China”, “Darknet Trading Forum”, and “Loulan City”";domain specific jargons: 94% acc, innocent-looking jargons: 89% acc;jargon;10 catefories: “Gamble”, “Carding”, “Drug”, “Fraud”, “Hacker”, “Weapon”, “Porn”, “Money laundering”, “Illegal production” and “Penny wise”;chinese;"Matching embeddings of words to embeddings of known  ""seed words"" using cosine sim"
+"YUAN, K., LU, H., LIAO, X., AND WANG, X. Reading thieves’
+cant: automatically identifying and understanding dark jargons from
+cybercrime marketplaces. In 27th USENIX Security Symposium
+(USENIX Security 18) (2018), pp. 1027–1041";O1, O3, O4;T2-T2', (T1, T3);M3, M4, M5, M8;S1, S2, S3;CD;E1,E4;"Cantreader, neural-network based embedding technique to analyze the semantics of words, detecting those
+whose contexts in legitimate documents are significantly different from those in underground communication";"dark net data: 375,993 traces (i.e., threads of posts) From darkode (sale and trade of hacking services and tools), Hack
+Forums (blackhat hacking activities discussion), Nulled
+(data stealing tool and service) and Silk Road (illegal drug) from 03/2008 to 05/2016 ,dark copora: dark net data
+Benigm: Reddit (no formal language)
+Hyperonymy dataset: wordnet, wikidata, dbpedia and yago mit hypernym relations
+Groundtruth dataset: Dea drug code word list & cybercrime marketplace product list";precision of 91% (manual evaluation of 200 detected terms, 182 dark jargon);dark jargon;drug, person, software, porn, weapon, others;english;trains a semantic comparison neural language model that jointly embeds the same word from underground and legitimate corpora into two comparable vectors, then flags words whose cosine similarity is low across those corpora but high between legitimate and reputable corpora as dark jargons. It then applies projection-based hypernym learning over word embeddings and a curated ontology to infer each jargon’s latent category (e.g., drug, malware), providing an interpretable semantic label.
+"LI, M., LI, X., HU, M., AND YUAN, D. Research on a framework for
+chinese argot recognition and interpretation by integrating improved
+mect models. Entropy 26, 4 (2024).";O1, O3;T2, T2';M3, M5, M7, M8, M9;S1, S2, S4;LS, LLM;E1;Clustering + LLMS;" based on dogwhistle dataset by  Xu et al: 1684 annotated argot-referential term pairs + Chinese text data from THUC News, Wikipedia text + LLM generated text
+";0.91 Accurace for GPT-4;argot;not defined (even not in base dataset);chinese;"The approach detects argot by learning contextual word embeddings with an improved MECT transformer and identifying semantic outliers via DBSCAN clustering.
+Detected argots are then interpreted using prompted large language models, which infer intended meanings from context and a list of words to choose one from. Meaning similarity (word2vec) is calculated)"
+"HUGHES, J., CAINES, A., AND HUTCHINGS, A. Argot as a trust
+signal: Slang, jargon & reputation on a large cybercrime forum (2023).";O1, O4;T1, T2, T2';M3, M4, M5, M8 ;S1, S3, S4 ;CD;E1 ;Sociolinguistic trust analyis, compares embedding of different corpora against each other (clean text, forum text, dark web text);"HackForums subset of CrimeBB: posts scraped from 27 un-
+derground and dark web forums related to cybercrime,
+with over 13 years of post data (since 2007), Urban
+Dictionary API";accuracy score of 0.723 and an F1 score of 0.703;argot;No categories, match with most voted Urban Dictionary entries;english;trains two FastText embedding spaces - one forum-specific and one general-language - and aligns them via Procrustes using only non-argot seed words so that semantic shifts reflect domain-specific usage rather than global differences. It then classifies words as argot using a supervised model over features derived from the aligned embeddings (e.g., cosine distance, raw vectors) plus external lexical signals, enabling scalable detection without requiring word-in-context inference.
+"I, X., ZHANG, J., ZHOU, Z., ZHAO, Z., QIAO, Q., HAN, K.,
+HOSSEN, M. I., AND HEI, X. Can’t say cant? measuring and reason-
+ing of dark jargons in large language models. CoRR abs/2405.00718
+(2024).";O3, O4;T1, T2, T2';M7, (M5);S2, S3, S4;LLM;E3;LLM probing, CantCounter;"government agency websites, online forums like Reddit, 4chan, and X , publicly available datasets
+from Kaggle and Hugging Face, dark web, and public compilations of cant.- 1,778 cants across 187 entities";"Question Type Method: 45.38 acc; Sample learning method: 52.13; Prompt Glue Method: 29.11";cant;politics, drugs, racism, weapons, and LGBT;english;create domain-specific test queries by fine-tuning GPT-2 to generate textual contextual scenes and systematically inserting curated cant (dark jargon) terms into those scenes. These queries are then expanded into multiple Q&A formats and analyzed at scale to measure how well LLM recognize and reason about hidden or obfuscated meanings
+"YANG, H., MA, X., DU, K., LI, Z., DUAN, H., SU, X., LIU, G.,
+GENG, Z., AND WU, J. How to learn klingon without a dictionary:
+Detection and measurement of black keywords used by the underground
+economy. In 2017 IEEE Symposium on Security and Privacy (SP)
+(2017), pp. 751–769.";O1, O3, O4;T1, T2, T2’, (T3);M1, M4, M5, M7, M8;S1, S2, S4;CD;E4;SEO keywords;"2,797,152 SEO pages in total: 2,733,728 SEO pages with spider tool detection system,  63,424 pages marked ""evil"" by Baidu with porn & gambling";94.3% accuracy  manual check;Black Keywords;7 categories: drugs (sales of drugs, drug equipments and etc.), dangerous items ( e.g., machine gun, daggers, knives and etc.), gambling (online casino, gambling machines, sports gambling and etc.), sex (pornography, adult forums and prostitute service), blackhat SEO, surrogacy and others. New categories found: including carder (trading of stolen credit card data), financial fraud and medical equipments;chinese;KDES (Keywords Detection and Expansion System): detects “black keywords” by querying candidate terms in a search engine and labeling them as black if their search results disproportionately trigger existing malware/fraud detectors, then expands the set using related-search suggestions that reflect real user behavior. It further clusters long-tail keywords by extracting frequent substrings to identify core terms
+"KIM, Y., ON, B., AND LEE, I. Two-step automated cybercrime
+coded word detection using multi-level representation learning. CoRR
+abs/2403.10838 (2024).";O1, O2, O3;T2 -T2', (T1);M5, M8, M9, (M3);S1, S2, S4;LS;E3;Two-step model (First sentence classification, then word level class);360,116 drug and 249,970 sex crime related articles;f1 0.991 ;cybercrime coded words (c3);2 categories: drug & sexual crime;korean (but approach is claimed language agnostic);learns crime-specific latent space by training BiLSTM-based autoencoders and estimating a centroid (mean latent vector) per crime class from encoded documents. At inference time, sentence- and token-level embeddings are projected into this latent space and classified via cosine similarity against class centroids, with novel coded words identified as high-similarity tokens absent from predefined lexicons

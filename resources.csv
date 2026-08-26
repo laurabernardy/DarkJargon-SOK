@@ -1,0 +1,42 @@
+Paper (short name);Sup.;Main Eval. Method;Language;;raw data eval;GT eval;train data;;;;;;;;;
+Covering Cracks in Content Moderation: Delexicalized Distant Supervision for Illicit Drug Jargon Detection;S2;E1;english;;reddit drug corpus (selfsupervised), silk road Forum corpus by dnmArchives;Two evaluation datasets based on the raw data, manually annotated 1000 sentences each;46 DEA terms (for automatic labeling), raw data labelled;;;;;;;;;
+DarkBert;S1, S4;E2;english;;ft with CoDA, sample of drug dataset by  (selfsupervised) ;sample of drug dataset of (selfsupervised});6.1 million pages crawled from dark web;;;;;;;;;
+Syntactic Enhanced Euphemisms Identification Based on Graph Convolution Networks and Dependency Parsing;S3;E2;english;;drug: drug dataset by selfsupervised, weapons: weapons dataset by yuan, sex: sexuality dataset by selfsupervised;datasets by selfsupervised;masked known entities in  sentences;;;;;;;;;
+Towards Dark Jargon Interpretation in Underground Forums;S1;E2;english;;dark corpus by yuan, clean corpus: web scrape of  1.2 million reddit threads;;-;;;;;;;;;
+Self-Supervised Euphemism Detection and Identification for Content Moderation;S1, S4;E2;english;;dataset by selfsupervised;Drugs: dea, weapons:onlineslangdictionary, slangpedia, urban thesaurus, sex: onlineslangdictionary;masked known entities in  sentences;;;;;;;;;
+Euphemism Identification via Feature Fusion and Individualization;S4;E2 ;english;;dataset selfsupervised;dataset by selfsupervised;Other mixture of the datasets;;;;;;;;;
+Chinese underground market jargon analysis based on unsupervised learning;S1;E2;chinese;;scraped 18.800 unique text posts in 29 QQ Groups;manually selected 70 typical Chinese underground jargons;raw ;;;;;;;;;
+An Unsupervised Detection Framework for Chinese Jargons in the Darknet;S1, S2;E2, E4;chinese;;DC-Dataset (E2),  200 detected samples (E4);30 input seeds (E2), Seed words of 10 crime categories’ (E4) ;DC-Dataset;;;;;;;;;
+DarkJargon.net: A Platform for Understanding Underground Conversation with Latent Meaning;S1, S2, S4; E4;english;;;;dataset m by yuan;;;;;;;;;
+A novel cross-domain adaptation framework for unsupervised criminal jargon detection via pre-trained contextual embedding of darknet corpus;S1. (S2), S4;E2, E4;chinese;;DC-Dataset(E2),  200 detected samples (E4);Seed words of 10 crime categories (E2) ;DC-Dataset;;;;;;;;;
+Reading Thieves' Cant: Automatically Identifying and Understanding Dark Jargons from Cybercrime Marketplaces;S1, S2, S3;E1,E4;english;;dark corpora & benigm corpora ;dea, cybercrime marketplace product list;;;;;;;;;;
+Research on a Framework for Chinese Argot Recognition and Interpretation by Integrating Improved MECT Models;S1, S2, S4;E1;chinese;; MNGG Dataset ; MNGG Dataset; MNGG Dataset ;;;;;;;;;
+Argot as a Trust Signal: Slang, Jargon & Reputation on a Large Cybercrime Forum;S1, S3, S4 ;E1 ;english;;Hackforum subset of CrimeBB dataset, with 500 words annotated;22,5 % of 500 annotated (dj, and non dj) words from Hackforum subset of CrimeBB dataset , urbandictionary;Hackforum subset of CrimeBB dataset, with 500 words annotated;;;;;;;;;
+Can't say cant? Measuring and Reasoning of Dark Jargons in Large Language Models;S2, S3, S4;E3;english;;Cant-Dataset;;Cant and Scene datasets. For finetuning gpt2 to create Q&A  ;;;;;;;;;
+How to Learn Klingon without a Dictionary: Detection and Measurement of Black Keywords Used by the Underground Economy;S1, S2, S4;E4;5 chinese, 1 korean;;2,797,152 pages;1000 detected sample keywords;;;;;;;;;;
+Two-step Automated Cybercrime Coded Word Detection using Multi-level Representation Learning;S1, S2, S4;E3;korean (but approach is language agnostic);;"darkbert+ regular bul-
+letin board articles from AIHub";"darkbert+ regular bul-
+letin board articles from AIHub";"darkbert+ regular bul-
+letin board articles from AIHub";;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;

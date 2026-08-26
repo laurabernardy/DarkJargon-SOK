@@ -1,0 +1,22 @@
+title;dataset name;relaese date of resource;time span;size;data source;preprocessed;annotation/creation;categories/sections;Language;
+resources mentioned in the corpus;;;;;;;;;;
+Jin, Youngjin, Eugene Jang, Yongjae Lee, Seungwon Shin, and Jin-Woo Chung. “Shedding New Light on the Language of the Dark Web.” (CoDA, 2022);Comprehensive Darkweb Annotations (CoDA);2022;n.d.;10000 samples, 9.51M words;crawled onion services;x;manual annotation: category per document;10 activity classes;primarly en;\darkbert
+Al Nabki, Mhd Wesam, Eduardo Fidalgo, Enrique Alegre, and Ivan de Paz. “Classifying Illegal Activities on Tor Network Based on Web Textual Contents.” (DUTA, 2017);Darknet Usage Text Addresses (DUTA);2017; May - July 2016;6,831 samples;crawled onion services;x;manual annotation: category and subcategory per document;Suspicious, Unsuspicious + Suspicious, Unsuspicious +26 activitiy classes + subclasses;en;
+Al-Nabki, Mhd Wesam, Eduardo Fidalgo, Enrique Alegre, and Laura Fernández-Robles. “ToRank: Identifying the Most Influential Suspicious Domains in the Tor Network.” (DUTA-10K, 2019);Darknet Usage Text Addresses (DUTA-10K) (update on DUTA);2019;May - July 2017;10367 samples, 7.60M words;crawled onion services;x;manual annotation: category and subcategory per document;28 activity classes + subclasses;en;\darkbert
+Durrett, Greg, Jonathan K. Kummerfeld, Taylor Berg-Kirkpatrick, et al. “Identifying Products in Online Cybercrime Marketplaces: A Dataset for Fine-Grained Domain Adaptation.” (2017);n.d.;2017;n.d.;1938 samples, 130k tokens;4 dark web forums;x;manual annotation: product entities;productnames;n.d.;\yuan2018
+Darknet Market Archives (2013–2015);n.d.;2015;2013-2015;1.6TB dark web data;89 dark net markets + 37+ related forums;;raw data;corpus per dark net market;n.d.;\contentcracks
+Damaso, John, and Colleen Cotter. “UrbanDictionary.Com.” (2007);The UrbanDictionary;2007;2007-2026;1,62 million terms, around 2,66million definitions;crowdsourced;;manual, definitions + word relations;;en;\argot
+DEA. “2018 Slang Terms and Code Words.” (2018);;2018;until 2018;n.d., 125 pages;n.d.;x;manual annotation: slang names;Drugs by common name;en + foreign language derivations;\contentcracks, \selfsupervised, \darkbert, \syntactic, \EuphemismIdent, \yuan2018
+dataset created by approach papers and used in other approaches;;;;;;;;;;
+selfsupervised;;2021;2008 - 2018;4,48 million posts;raw: reddit data repository,  \gab,  \zannetou et. Al, \cite{cybercrimemarket}, \portnoff et al, GT: slangpedia, online slang dictionary, urban thesaurus, \dea,;(x);category determined by source;Drugs, Weapons, Sexuality;primarly en;\contentcracks, \darkbert, \syntactic, \EuphemismIdent
+yuan2018;;2018;2008 - 2018;dark web: ca. 376k  samples, 1.5 million tokens, ordinary lang: ca. 1.45 million samples, 9.35 million words ;dark web: Dark Net Market Archives, \cybercrimemarkets, ordinary lang: reddit data repository, wikipedia, GT: dea, \cybercrimemarkets;x;category determined by source;dark web, ordinary language;n.d.;\seyler,\Darkjargonnet 
+additional resources used by individual approaches;;;;;;;;;;
+\darkbert;;2023;n.d.;6.1 million pages;crawled onion services;;n.d.;;n.d.;
+\chineseunderground;;2016;n.d.;18000 text posts;underground market chat goups;x;raw data;;zh;
+\unsupervised;Dark Corpus (DC)-Dataset;2022;November - December 2020;44740 traces, 2792000 words;6 chinese darknet trading websites;x;raw data;;zh;\novelcrossdmain (extension of  \unsupervised)
+\mect;Mystique Naming Glossary Gathering (MNGG)-Dataset;2024;n.d.;11300 sentences, 23660 tagged dark jargon terms;Dogwhistle dataset by \Xu et al, News text data;x;automatical BIO-tagging dark jargon terms;;zh;
+\argot;;2018;n.d.;500 words;Hackforum subset of CrimeBB dataset \crimebb;x;manual annotation: dark jargon terms;;en;
+\cansaycant;Q&A-query dataset, cant-dataset, scene-dataset;2024;n.d.;692 dark jargon terms, 53 entities;government agency websites, online forums (reddit, 4chan, X), kaggle datasets, huggingface datasets, dark web  and public dark jargon compilations (nicht näher definitert);x;GPT2-generated samples;politics, drugs, racism, weapons, LGBT;en;
+\klingon;;2017;August - September 2016;2797000 websites;SEO pages via baidu ;x;;;zh;
+\twostep;;2024;n.d.;360100 drug related articles, 250000 sex crime related articles;"drug and sex crime related articles from Smart polic-
+ing big data platform, bulletin board articles from AlHub";x;category determined by source;sex, drugs;korean;

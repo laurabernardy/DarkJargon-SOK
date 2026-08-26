@@ -1,0 +1,24 @@
+approach;eval type;metric;compared to;results;Detection;Interpretation
+Song et. Al (2025);E1;P, R, F1;;drugs: P=0.666, R=0.620, F1=0.642,  Silk Road P=0.581, R=0.693, F1=0.632;x;
+;;;Jin et al. (2023);drugs: p=0.5460, R=0.5705 F1=0.5580 silk road: P=0.4790 R=0.5793 F1=0.5244;;
+;;;Yuan et al. (2018);drugs: p=0.7778, R=0.1879 F1=0.3027 silk road: P=0.7209 R=0.2347 F1=0.3541;;
+;;;Zhu et al. (2021);drugs: p=0.5897, R=0.2573 F1=0.3583 silk road: P=0.5026 R=0.4123 F1=0.4530;;
+Jin et al. (2023);E2;P@10;;0,6;x;
+Huang et al. (2023);E2;acc@1;;drugs: 0.08, weapons: 0.12, sex: 0.37;x;
+Seyler et al. (2021) (KL-Divergence);E2 + E4;MRR;;Artificial DJ: 0.909, DJ: 0.892;x;
+Zhu et al. (2021);E2;P@10;;drugs: 0.50, weapons: 0.40, sex: 0.70;x;x
+;;;Yuan et al. (2018);drugs: 0.30, weapons: 0.20, sex: 0.10;;
+Hu et al. (2024);E2;acc@1;;0,31;x;
+Thao et al. (2018) (Word2Vec CBOW);E2;P@10;;0,6056;;
+Ke et al. (2022);E2;P@10;;0,58;x;
+;;;Zhao et al. (2016);0.17/0.29;;
+Seyler et al (2021);E4;-;;-;x;x
+Ke et al. (2024);E2;P@10;;0,58;x;
+;;;Zhao et al. (2016);0.17/0.29;;
+Yuan et al. (2018);E1+E4;P, R;;R 77.2, P 91;x;
+Li et al. (2024);E1;P, R, F1;;P = 0.35, R = 0.31, and F1 = 0.33;x;
+Hughes et al. (2023);E1;accuracy, F1;;acc = 0.67, F1= 0.654;x;
+;;;Seyler et al. (2021)  (KL-Divergence);acc = 0.723, F1= 0.703;;
+Ji et al. (2024);E3;Accuracy;;Interpretation ChatGPT-3.5=45.38, Detection: Oneshot: BARD=65.91, Zeroshot: New Bing=50;x;x
+Yuang et al. (2017);E4;Accuracy;;94,3;x;
+Kim et al. (2024);E3;P, R, F1;;P = 0.991, R = 0.991, F1 = 0.991;x;

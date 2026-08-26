@@ -1,0 +1,35 @@
+Objective Type (O) 
+O1 Term-level detection: identify jargon tokens/phrases 
+O2 Post-level detection: classify posts containing jargon 
+O3 Interpretation / grounding: map jargon → meaning/entity 
+O4 Analysis / reasoning: probing, evaluation, or sociolinguistic analysis 
+
+Jargon Type (T) 
+T1 Slang  
+T2 Euphemisms (indirect references) 
+R3 Obfuscations / variants 
+T4 Contextual semantic shift
+
+Model (M) 
+M1 Lexicon / rules
+M2 Probabilistic (LDA und co)
+M3 Embeddings 
+M4  Classifier 
+M5 Contextual 
+M5 Graph / syntactic models 
+M6 Unsupervised / clustering
+M7 Causal/Autoregressive LLMs
+M8 Mathmatical/Statistical Measures 
+
+Supervision (S) 
+S1 Unsupervised 
+S2 Weak / distant 
+S3Supervised 
+S4 Semi/self-supervised
+
+ Evaluation (E) 
+E1 Token/span metrics 
+E2 Post/Sentence-level metrics 
+E3 Ranking / discovery metrics
+E4 Human / qualitative analysis 
+E5 Diagnostic / probing 
