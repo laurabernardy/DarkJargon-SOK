@@ -7,15 +7,14 @@ O4 Analysis / reasoning: probing, evaluation, or sociolinguistic analysis
 Jargon Type (T) 
 T1 Slang  
 T2 Euphemisms (indirect references) 
-R3 Obfuscations / variants 
+T3 Obfuscations / variants 
 T4 Contextual semantic shift
 
 Model (M) 
 M1 Lexicon / rules
 M2 Probabilistic (LDA und co)
 M3 Embeddings 
-M4  Classifier 
-M5 Contextual 
+M4 Classifier 
 M5 Graph / syntactic models 
 M6 Unsupervised / clustering
 M7 Causal/Autoregressive LLMs
