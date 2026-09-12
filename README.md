@@ -17,7 +17,7 @@ No publication-date restriction was applied. The 2015–2025 period in the paper
 
 The database search produced 865 records, of which 847 remained after deduplication. Screening retained 15 contributions. Backward and forward snowballing screened 41 additional unique candidates and retained 9. The final corpus therefore contains **24 contributions: 16 approach papers and 8 resource contributions**.
 
-> **Camera-ready note:** Add the exact date or date range on which each database was searched: **26.11.2025** - **21.04.2026** (updated).
+> **Camera-ready note:** Date range on which each database was searched: **26.11.2025** (initial run), **21.04.2026** (updated).
 
 ## Repository contents
 
