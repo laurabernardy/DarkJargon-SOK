@@ -1,0 +1,9 @@
+This SoK is based exclusively on previously published literature. No new experiments or data collection were conducted. All datasets originate from the surveyed works, and 
+Responsibility for collection, anonymization, and ethical approval remains with the original authors. 
+Accordingly, this survey introduces no additional ethical risks beyond those inherent in the referenced publications, except for the broader dual-use risks of dark jargon identification.
+
+Methods for identifying coded and context-dependent language are inherently dual-use and transferable beyond criminal contexts. 
+They could also target dissidents, journalists, activists, or marginalized communities in authoritarian settings, where similar linguistic strategies are used for protection. 
+In such cases, these techniques may enable surveillance, censorship, or repression.% rather than harm prevention.
+
+Future work should therefore acknowledge dual-use risks, clearly delimit intended applications, and incorporate safeguards such as human-in-the-loop analysis, conservative deployment assumptions, and human-rights assessments.
