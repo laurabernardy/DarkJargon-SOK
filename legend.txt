@@ -15,7 +15,7 @@ M1 Lexicon / rules
 M2 Probabilistic (LDA und co)
 M3 Embeddings 
 M4 Classifier 
-M5 Graph / syntactic models 
+M5 Contextual
 M6 Unsupervised / clustering
 M7 Causal/Autoregressive LLMs
 M8 Mathmatical/Statistical Measures 

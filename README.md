@@ -96,15 +96,15 @@ Studies based only on surface-web data were outside the review scope because the
 
 ### Model families
 
-- `M1`: lexicons or rules
-- `M2`: probabilistic models
-- `M3`: embeddings
-- `M4`: classifiers
-- `M5`: contextual language models
-- `M6`: graph or syntactic models
-- `M7`: unsupervised or clustering methods
-- `M8`: causal or autoregressive large language models
-- `M9`: mathematical or statistical measures
+- `M1` Lexicon / rules
+- `M2` Probabilistic (LDA und co)
+- `M3` Embeddings 
+- `M4` Classifier 
+- `M5` Contextual
+- `M6` Unsupervised / clustering
+- `M7` Causal/Autoregressive LLMs
+- `M8` Mathmatical/Statistical Measures 
+
 
 ### Supervision
 
